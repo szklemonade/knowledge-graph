@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Knowledge Map (Depth-1 Center Float)",
+  "version": "0.6.5",
+  "description": "中心ノードは中央付近に浮遊してロック。ドラッグは葉ノードのみ。パン無効、ズームはボタンのみ。",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.wikipedia.org/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.wikipedia.org/wiki/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
